@@ -9809,10 +9809,11 @@ textarea.form-control {
     /* Foundation page */
 .foundation-content {
   
-  padding: 6em 4%;
+  padding: 4em 2%;
   margin: 0 auto;
   
   }
+
   @media (min-width: 576px) {
     .foundation-content {
       max-width: 540px; } }
@@ -9834,22 +9835,22 @@ textarea.form-control {
   }
   
   .foundation-image{
-    margin: 5% 10%;
+    margin: 5% 2%;
     padding: 25px; 
   }
   .first-row{
-    width: 100%;
     display: flex;
-    padding-left: 50px;
+    width: 100%;
+    /* padding-left: 50px; */
   }
   .second-row{
-    width: 100%;
     display: flex;
-    padding-left: 50px;
+    width: 100%;
+    /* padding-left: 50px; */
   }
-  .first-row, .second-row {
-    padding-left: 2%;
-  }
+  /* .first-row, .second-row {
+    padding-left: 2%; 
+  } */
   
   @media (max-width: 768px) {
     .first-row, .second-row {
@@ -9862,7 +9863,6 @@ textarea.form-control {
     transition: 2s;
   }
   .image img{
-    /* vertical-align: middle; */
     
     border-radius: 25px;
     max-width: 100%;
@@ -9870,7 +9870,7 @@ textarea.form-control {
     
   }
   .image img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     border:  2px solid green;
     z-index: 2;
     
@@ -9878,10 +9878,10 @@ textarea.form-control {
   }
   .foundation-image h3{
     color: rgba(0, 0, 0, 0.7);
-    margin: 10px 0;
+    margin: 15px 0;
     text-align: center;
-    width: 80%;
-    font-size: 1.5em;
+    width: 100%;
+    font-size: 1em;
     line-height: 1.5;
   }
  
