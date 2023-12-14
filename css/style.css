@@ -9808,10 +9808,10 @@ textarea.form-control {
 
     /* Foundation page */
 .foundation-content {
-  
   padding: 4em 2%;
-  margin: 0 auto;
-  
+  margin: 2px auto;
+  overflow: hidden;
+ 
   }
 
   @media (min-width: 576px) {
@@ -9831,58 +9831,98 @@ textarea.form-control {
     font-size: 2.5em;
     color: green;
     text-align: center;
+    position: relative;
+    top: 50px
     
   }
   
   .foundation-image{
-    margin: 5% 2%;
-    padding: 25px; 
-  }
-  .first-row{
     display: flex;
-    width: 100%;
-    /* padding-left: 50px; */
-  }
-  .second-row{
-    display: flex;
-    width: 100%;
-    /* padding-left: 50px; */
-  }
-  /* .first-row, .second-row {
-    padding-left: 2%; 
-  } */
-  
-  @media (max-width: 768px) {
-    .first-row, .second-row {
-      flex-direction: column;
-      padding-left: 0;
-    }
-  }
-  .image{
-    padding: 5px;
-    transition: 2s;
-  }
-  .image img{
-    
-    border-radius: 25px;
-    max-width: 100%;
-    height: auto;
-    
-  }
-  .image img:hover{
-    transform: scale(1.05);
-    border:  2px solid green;
-    z-index: 2;
-    
-   
-  }
-  .foundation-image h3{
-    color: rgba(0, 0, 0, 0.7);
-    margin: 15px 0;
-    text-align: center;
-    width: 100%;
-    font-size: 1em;
-    line-height: 1.5;
+    width: calc(200px* 12); 
+    animation: scroll 40s  linear infinite;
+    position: relative;
   }
  
+  .foundation-image {
+    display: flex;
+    width: calc(200px * 12);
+    animation: scroll 40s linear infinite;
+    position: relative;
+  }
+  
+  .foundation-content::before,
+  .foundation-content::after {
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 100px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: transform 0.3s ease; 
+  }
+  
+  .foundation-content::before {
+    left: 100px;
+    top: 85%;
+  }
+  
+  .foundation-content::after {
+    right: 100px;
+    top: 85%;
+    transform: scaleX(-1);
+  }
+  
+  
+
+  .slide {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 500px;
+  padding: 10px;
+  
+  }
+
+  .image img {
+    border-radius: 20px;
+    height: auto;
+    width: 300px; 
+    max-height: 100%;
+  }
+ 
+  .slide:hover {
+    transform: scale(1.05);
+  }
+
+
+  .foundation-image:hover {
+    animation-play-state: paused;
+  }
+  
+  .slide .name h3 {
+    color: rgba(0, 0, 0, 1.5);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+    width: 100%;
+    line-height: 1.5;
+    
+  }
+  .slide .para {
+    text-align: center;
+  }
+  .slide .para p {
+    font-size: 14px;
+  }
+  @keyframes  scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px*6));
+    }
+  }
+
+
+  
   
